@@ -1,0 +1,103 @@
+
+  
+  .chatuser .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .chatuser .chat-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  .chatuser .unread-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
+  .chatuser .chat-box {
+    width: 300px;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  .chatuser .chat-header {
+    padding: 10px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chatuser .chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: var(--light-color);
+  }
+  
+  .chatuser .message {
+    margin-bottom: 10px;
+  }
+  
+  .chatuser .sender {
+    text-align: left;
+    color: var(--secondary-color);
+
+  }
+  
+  .chatuser .replier {
+    text-align: right;
+    color: var(--primary-color);
+  }
+  
+  .chatuser .message-input {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: var(--light-color);
+  }
+  
+  .chatuser textarea {
+    flex: 1;
+    resize: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .chatuser button {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chatuser button:hover {
+    background: var(--hover-color);
+  }
+  

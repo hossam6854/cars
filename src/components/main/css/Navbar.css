@@ -1,0 +1,222 @@
+/* navbar page*/
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #639cd9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc200;
+}
+
+.language-toggle {
+  top: 10px; /* يحدد المسافة من أعلى الصفحة */
+  right: 10px; /* يحدد المسافة من يمين الصفحة */
+  background-color: #007bff; /* لون خلفية الزر */
+  color: #fff; /* لون النص */
+  border: none; /* إزالة الحدود */
+  border-radius: 5px; /* جعل الزر مستدير الزوايا */
+  padding: 10px 15px; /* مساحة داخلية */
+  font-size: 14px; /* حجم الخط */
+  cursor: pointer; /* شكل المؤشر عند التحويم */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل لإبراز الزر */
+  z-index: 1000; /* ضمان بقاء الزر فوق باقي العناصر */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: #0056b3; 
+  transform: scale(1.1); /* تكبير الزر قليلاً عند التحويم */
+}
+
+/* استايل خاص بالموبايل */
+@media (max-width: 768px) {
+  .language-toggle {
+    top: 15px; /* زيادة المسافة من الأعلى على الأجهزة الصغيرة */
+    right: 15px; /* زيادة المسافة من اليمين */
+    padding: 8px 12px; /* تقليل الحواف */
+    font-size: 12px; /* تقليل حجم النص */
+  }
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #220e24;
+  font-weight: bold;
+  border-bottom: 2px solid #220e24;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #342056;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons .login-button {
+  background-color: #5454c5;
+  color: white;
+}
+
+.auth-buttons .signup-button {
+  background-color: #990011;
+  color: white;
+}
+
+.auth-buttons .login-button:hover {
+  background-color: #342056;
+}
+
+.auth-buttons .signup-button:hover {
+  background-color: #fa6775;
+}
+
+.logout-button {
+  background-color: #990011;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.logout-button:hover {
+  background-color: #fa6775;
+}
+
+
+
+/* Media queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #639cd9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-navbar {
+    display: none;
+  }
+
+  .close-menu {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .auth-buttons button {
+    font-size: 0.8rem;
+  }
+
+  .logout-button {
+    font-size: 0.9rem;
+  }
+}

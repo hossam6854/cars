@@ -1,0 +1,140 @@
+/* Global Styles */
+
+
+.admin-dashboard {
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--container-bg, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+  animation: fadeIn 1s ease;
+
+}
+
+
+.admin-dashboard .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-dashboard .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard .header h2 {
+  font-size: 28px;
+  color: var(--primary-color, #ffffff);
+}
+
+/* Controls Section */
+.admin-dashboard .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.admin-dashboard .search-box {
+  flex: 1;
+}
+
+.admin-dashboard .filter-select {
+  min-width: 150px;
+}
+
+/* Table Styles */
+.admin-dashboard .MuiTableCell-root {
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-dashboard .MuiTableRow-root {
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.admin-dashboard .MuiTableRow-root:hover {
+  transform: translateY(-3px);
+  background: var(--hover-bg, #f1f7ff);
+}
+
+.admin-dashboard .car-image {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.admin-dashboard .car-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Buttons */
+.admin-dashboard .MuiButton-containedPrimary {
+  background: var(--primary-color, #0056b3);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admin-dashboard .MuiButton-containedPrimary:hover {
+  background: var(--hover-primary-color, #003f7a);
+  transform: scale(1.05);
+}
+
+.admin-dashboard .MuiButton-outlinedSecondary {
+  border: 1px solid var(--secondary-color, #d32f2f);
+  color: var(--secondary-color, #d32f2f);
+  font-size: 12px;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-dashboard .MuiButton-outlinedSecondary:hover {
+  color: #fff;
+  background: var(--secondary-color, #d32f2f);
+  transform: scale(1.05);
+}
+
+/* Pagination */
+.admin-dashboard .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Dialog */
+.admin-dashboard .MuiDialog-paper {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .admin-dashboard .MuiTableCell-root {
+    font-size: 12px;
+  }
+
+  .admin-dashboard .car-image {
+    max-width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .admin-dashboard .MuiTableContainer-root {
+    overflow-x: auto; /* السماح بالتمرير الأفقي */
+  }
+}

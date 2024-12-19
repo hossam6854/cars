@@ -1,0 +1,242 @@
+
+
+
+
+
+
+
+
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #f5f5fa;
+  padding: 20px;
+}
+
+
+
+.booking-page h1 {
+  color: #5454c5;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.25rem solid #639cd9;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.booking-page .car-summary {
+  width: 100%;
+  max-width: 40rem;
+  background: linear-gradient(135deg, #ffffff, #e6ecf8);
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.booking-page  .car-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-page .car-summary h2 {
+  color: #5454c5;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.booking-page .car-summary p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.booking-page .booking-form {
+  width: 100%;
+  max-width: 40rem;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #dcdfe6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-page .booking-form h3 {
+  color: #5454c5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.booking-page .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-page .form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5454c5;
+  margin-bottom: 0.5rem;
+}
+
+.booking-page .form-group input,
+.booking-page .form-group textarea {
+  width: 97%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #639cd9;
+  border-radius: 5px;
+  background: #f9f9ff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-page .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.booking-page .form-group input:hover,
+.booking-page .form-group textarea:hover {
+  border-color: #87ceeb;
+}
+
+.booking-page .form-group input:focus,
+.booking-page .form-group textarea:focus {
+  border-color: #87ceeb;
+  box-shadow: 0 0 8px rgba(135, 206, 235, 0.8);
+  outline: none;
+}
+
+.booking-page .submit-button {
+  width: 100%;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #639cd9, #1e1e2f);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-page .submit-button:hover {
+  background: linear-gradient(90deg, #5454c5, #1e1e2f);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.booking-page .submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(99, 156, 217, 0.8);
+}
+
+.booking-page .loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5fa;
+}
+
+.booking-page .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #dcdfe6;
+  border-top: 5px solid #639cd9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.booking-page .status-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.booking-page .status-message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.booking-page .status-message.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .booking-page .car-summary {
+    text-align: center;
+  }
+
+  .booking-page .booking-form {
+    padding: 15px;
+  }
+
+  .booking-page .form-group input,
+  .booking-page .form-group textarea {
+    font-size: 0.95rem;
+  }
+
+  .booking-page .submit-button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .booking-page .form-group input,
+  .booking-page .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .booking-page .submit-button {
+    font-size: 0.9rem;
+  }
+}

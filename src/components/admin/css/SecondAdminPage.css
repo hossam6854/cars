@@ -1,0 +1,125 @@
+/* Encapsulation using a unique namespace */
+.inspection-form {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5faff, #e0e6f7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.inspection-form h2 {
+  text-align: center;
+  color: #5454c5;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #639cd9;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Individual Part Sections */
+.inspection-form .part-inspection {
+  margin-bottom: 25px;
+}
+
+.inspection-form .part-inspection h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #342056;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #639cd9;
+  padding-bottom: 5px;
+}
+
+/* Status Dropdown */
+.inspection-form .part-inspection select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #639cd9;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #342056;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inspection-form .part-inspection select:focus {
+  outline: none;
+  border-color: #5454c5;
+  box-shadow: 0 0 8px rgba(84, 84, 197, 0.5);
+}
+
+/* File Input Styling */
+.inspection-form .part-inspection input[type="file"] {
+  width: 97%;
+  padding: 10px;
+  border: 2px dashed #639cd9;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  color: #342056;
+  margin-bottom: 10px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.inspection-form .part-inspection input[type="file"]:hover {
+  border-color: #5454c5;
+  background-color: #f0f5ff;
+}
+
+/* Submit Button */
+.inspection-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #639cd9, #342056);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.inspection-form button:hover {
+  background: linear-gradient(90deg, #5454c5, #342056);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inspection-form {
+      padding: 15px;
+  }
+
+  .inspection-form h2 {
+      font-size: 1.6rem;
+  }
+
+  .inspection-form .part-inspection select {
+      font-size: 0.9rem;
+  }
+
+  .inspection-form .part-inspection input[type="file"] {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inspection-form {
+      padding: 10px;
+  }
+
+  .inspection-form h2 {
+      font-size: 1.4rem;
+  }
+}

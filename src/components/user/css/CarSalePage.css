@@ -1,0 +1,512 @@
+
+/* Scoped Styles for Car Sale Page */
+.car-sale-page {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.car-sale-page h1, .car-sale-page h3 {
+  color: var(--accent-color);
+}
+
+.car-sale-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styling */
+/* تحسين تنسيق الرأس */
+.car-sale-header {
+  background: linear-gradient(135deg, #639cd9, #342056);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.car-sale-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.car-sale-header p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+
+.car-sale-page .search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.car-sale-page .search-bar input {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.car-sale-page .search-bar button {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.car-sale-page .search-bar input::placeholder {
+  color: var(--hover-color);
+}
+
+.car-sale-page .search-bar button:hover {
+  background: var(--hover-color);
+}
+
+/* Flexbox container for content */
+.car-sale-page .compo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
+.car-sale-page .filters  .filter-group {
+  width: 250px;
+  padding: 15px;
+  background: linear-gradient(135deg, #639cd9, #342056);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.car-sale-page .filters .filter-group {
+  margin-bottom: 15px;
+}
+
+.car-sale-page .filters h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.car-sale-page .filter-group select,
+.car-sale-page .filter-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: 1px solid var(--border-color);
+}
+
+
+
+/* Header Section */
+.car-sale-page .filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.car-sale-page .clear-filters {
+  background: var(--hover-color);
+  border: none;
+  color: var(--text-color);
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.car-sale-page .clear-filters:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+
+
+
+.car-sale-page .filter-group h3 {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Condition Buttons */
+.car-sale-page .condition-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.car-sale-page .condition-button {
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  background: var(--light-color);
+  color: var(--dark-color);
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.car-sale-page .condition-button.active {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.car-sale-page .condition-button:hover {
+  background: var(--hover-color);
+  color: var(--text-color);
+  transform: scale(1.05);
+}
+
+/* Dropdown Styling */
+.car-sale-page .filter-dropdown select {
+  width: 100%;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--light-color);
+  color: var(--dark-color);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-sale-page .filter-dropdown select:focus {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 8px var(--hover-color);
+}
+
+/* Price Range Inputs */
+.car-sale-page .price-range {
+  display: flex;
+  gap: 15px;
+}
+
+.car-sale-page .price-range input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background: var(--light-color);
+  color: var(--dark-color);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-sale-page .price-range input:focus {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 8px var(--hover-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+  .car-sale-page .condition-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+
+
+.car-sale-page .car-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  cursor: pointer;
+  gap: 20px;
+}
+
+.car-sale-page .car-card {
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-sale-page .car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Car Image Section */
+.car-sale-page .car-image {
+  position: relative;
+  flex: 2;
+  overflow: hidden;
+}
+
+.car-sale-page .car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.car-sale-page .car-card:hover .car-image img {
+  transform: scale(1.2);
+}
+
+.car-sale-page .car-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.car-sale-page .car-card:hover .car-overlay {
+  opacity: 1;
+}
+
+.car-sale-page .overlay-text {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Car Details Section */
+.car-sale-page .car-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: linear-gradient(to bottom, var(--light-color), var(--light-color) 90%, var(--secondary-color) 100%);
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.car-sale-page .car-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Meta Info Styling */
+.car-sale-page .car-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin: 10px 0;
+
+}
+
+.car-sale-page .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.car-sale-page .meta-item svg {
+  color: var(--hover-color);
+  font-size: 1.2rem;
+}
+
+/* Price Styling */
+.car-sale-page .car-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--hover-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* Extra Info Styling */
+.car-sale-page .car-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+.car-sale-page .extra-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.car-sale-page .extra-item svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+
+
+/* Condition Badge */
+.car-sale-page .car-condition-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--hover-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-sale-page .car-condition-badge.new {
+  background: var(--primary-color);
+}
+
+.car-sale-page .car-condition-badge.used {
+  background: var(--hover-color);
+}
+
+/* No Cars Message */
+.car-sale-page .no-cars-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .car-sale-page .car-list {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .car-sale-page .filter-group {
+    width: 90%;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .car-sale-page .content {
+    flex-direction: column;
+  }
+
+}
+
+
+
+
+.car-sale-page .compare-button , .compare-button1 {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: none; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.car-sale-page .compare-button:hover , .compare-button1:hover{
+  background: var(--hover-color);
+}
+
+.car-sale-page .compare-button.active{
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+
+
+.car-sale-page .compare-section {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.car-sale-page .compare-section button {
+  background: var(--secondary-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.car-sale-page .compare-section button:disabled {
+  background: var(--border-color);
+  cursor: not-allowed;
+}
+
+/* تحسين التجاوب */
+@media screen and (max-width: 768px) {
+  .car-sale-page .compo {
+    flex-direction: column;
+  }
+
+  .car-sale-page .filter-group {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .car-sale-page .car-list {
+    grid-template-columns: 1fr;
+  }
+
+  .car-sale-page .compare-section {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    justify-content: space-between;
+  }
+}

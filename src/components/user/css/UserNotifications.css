@@ -1,0 +1,103 @@
+.user-notifications {
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.notifications-icon {
+  cursor: pointer;
+  position: relative;
+  font-size: 24px;
+  color: #444;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.notifications-icon:hover {
+  color: #007bff;
+  transform: scale(1.1); /* تكبير بسيط عند التمرير */
+}
+
+.unread-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #dc3545; /* لون أحمر مميز */
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notifications-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 350px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px 0;
+  border: 1px solid #e0e0e0;
+}
+
+.notification-item {
+  color: #333;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  flex-grow: 1;
+}
+
+.no-notifications {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.clear-button {
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+  text-align: center;
+  width: calc(100% - 30px);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.clear-button:hover {
+  background: #007bff;
+  transform: scale(1.05);
+}

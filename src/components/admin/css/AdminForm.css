@@ -1,0 +1,195 @@
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+}
+
+/* Form Title */
+.admin-form .admin-form__title {
+  text-align: center;
+  color: #5454c5;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.25rem solid #639cd9;
+  padding-bottom: 0.5rem;
+  
+}
+
+/* Form Section Group */
+.admin-form .admin-form__group {
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 1.25rem;
+  
+}
+
+/* Labels */
+.admin-form .admin-form__label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #5454c5;
+  text-transform: capitalize;
+}
+
+/* Inputs, Selects, and Textareas */
+.admin-form select
+ {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #639cd9;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  box-shadow: inset 0 0.25rem 0.5rem rgba(93, 77, 77, 0.4);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.admin-form .admin-form__input,
+.admin-form .admin-form__textarea {
+  width: 96%;
+  padding: 0.75rem;
+  border: 1px solid #639cd9;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.admin-form .admin-form__textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+/* Hover & Focus Effects */
+.admin-form .admin-form__input:hover,
+.admin-form select:hover,
+.admin-form .admin-form__textarea:hover {
+  border-color: #87ceeb;
+}
+
+.admin-form .admin-form__input:focus,
+.admin-form select:focus,
+.admin-form .admin-form__textarea:focus {
+  outline: none;
+  border-color: #87ceeb;
+  box-shadow: 0 0 0.625rem rgba(135, 206, 235, 0.8);
+}
+
+/* Submit Button */
+.admin-form .admin-form__button {
+  width: 100%;
+  max-width: 40rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #639cd9, #1e1e2f);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.admin-form .admin-form__button:hover {
+  background: linear-gradient(90deg, #5454c5, #1e1e2f);
+  transform: scale(1.05);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.4);
+}
+
+.admin-form .admin-form__button:focus {
+  outline: none;
+  box-shadow: 0 0 0.625rem rgba(99, 156, 217, 0.6);
+}
+
+/* Error Message */
+.admin-form .admin-form__message {
+  color: #ff5252;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 0.625rem;
+  text-align: center;
+}
+
+/* Form Details Section */
+.admin-form .admin-form__details {
+  width: 100%;
+  max-width: 40rem;
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #f5faff, #e0e6f7);
+  border-radius: 0.5rem;
+  border: 1px solid #3b3b50;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+
+}
+
+/* Specific Details Modifiers */
+.admin-form .admin-form__details--new {
+  border-color: #639cd9;
+}
+
+.admin-form .admin-form__details--used {
+  border-color: #ff6f61;
+}
+
+/* Section Subtitle */
+.admin-form .admin-form__subtitle {
+  font-size: 1.5rem;
+  color: #5454c5;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 0.125rem solid #639cd9;
+  padding-bottom: 0.3125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-form {
+    padding: 1rem;
+  }
+
+  .admin-form .admin-form__title {
+    font-size: 1.8rem;
+  }
+
+  .admin-form .admin-form__button {
+    font-size: 1rem;
+  }
+
+  .admin-form .admin-form__input,
+  .admin-form .admin-form__select,
+  .admin-form .admin-form__textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-form .admin-form__title {
+    font-size: 1.6rem;
+  }
+
+  .admin-form .admin-form__input,
+  .admin-form .admin-form__select,
+  .admin-form .admin-form__textarea {
+    font-size: 0.9rem;
+  }
+
+  .admin-form .admin-form__button {
+    font-size: 0.95rem;
+  }
+}

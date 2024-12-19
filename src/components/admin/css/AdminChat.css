@@ -1,0 +1,209 @@
+
+.admin-chat {
+  display: flex;
+  height: 100vh;
+  color: var(--text-color);
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  padding: 10px;
+  gap: 15px;
+  margin: 30px;
+  border-radius: 20px;
+  animation: fadeIn 1s ease;
+
+  
+}
+
+.admin-chat .close-button {
+  color: #ff6f61;
+  background-color: #6116e400;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  font-size: 25px; 
+}
+
+
+.admin-chat .user-list {
+  flex: 1;
+  max-width: 300px;
+  background: linear-gradient(135deg, #639cd9, #342056);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.admin-chat .user-list h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.admin-chat .user-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.admin-chat .user-button:hover {
+  background: var(--hover-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.admin-chat .user-button.active {
+  background: var(--accent-color);
+}
+
+.admin-chat .unread-badge {
+  background: #ff6f61;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat Window */
+.admin-chat .chat-window {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.admin-chat .chat-header {
+  padding: 15px;
+  background: var(--primary-color);
+  color: var(--light-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.admin-chat .chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto; /* Enable scroll only for chat */
+  scroll-behavior: smooth; /* Smooth scroll for new messages */
+  background: var(--light-color);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.admin-chat .message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.admin-chat .message.admin {
+  background: var(--primary-color);
+  color: var(--light-color);
+  margin-left: auto;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.admin-chat .message.user {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  margin-right: auto;
+  text-align: right;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.admin-chat .chat-input {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  background: var(--light-color);
+  border-radius: 0 0 15px 15px;
+}
+
+.admin-chat .message.new {
+  animation: bounceIn 0.4s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.admin-chat .chat-input textarea {
+  flex: 1;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 2px 4px var(--shadow-color);
+  transition: border-color 0.3s ease;
+}
+
+.admin-chat .chat-input textarea:focus {
+  border-color: var(--hover-color);
+  outline: none;
+}
+
+.admin-chat .chat-input button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admin-chat .chat-input button:hover {
+  background: var(--hover-color);
+  transform: scale(1.1);
+}
+
+.admin-chat .chat-input button:active {
+  transform: scale(0.9);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
